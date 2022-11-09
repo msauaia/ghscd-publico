@@ -1,12 +1,21 @@
-name: Hello world Action!
+name: Hello World Action!
 
 on: push
 
 jobs:
-
+  
   hello-world:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "GoHacking GHSSCDD BB 20222"
-      
-      
+      - run: echo "GoHacking GHSCD BB 2022!"
+  
+  call-other-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
+      - run: echo "SUCESSO!"
