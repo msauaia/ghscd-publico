@@ -7,4 +7,6 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-      - runs: echo "GoHacking GHSSCDD BB 20222"
+      - run: echo "GoHacking GHSSCDD BB 20222"
+      
+      
